@@ -1,0 +1,181 @@
+*{
+  font-family: 'Arimo', sans-serif;
+}
+container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "content1 content1 content1 content1"
+    "content2 content2 nav nav"
+    "content3 content3 content4 content4"
+    "content5 content5 content6 content6"
+    "content7 content7 content8 content8"
+    "content9 content9 content10 content10"
+    "footer footer footer footer";
+  grid-gap: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+}
+.container2{
+  width: 80%;
+  margin: 0 auto;
+}
+header{
+  background: #03a3df;
+}
+header::after{
+  content:'';
+  display: table;
+  clear:both;
+}
+a{
+  color:white;
+  text-decoration: underline;
+}
+h1{
+  font-size: 32px;
+  text-align: center;
+}
+
+.logo{
+  float:left;
+  padding: 1rem;
+}
+nav {
+  float: right;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #1b447f;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover{
+  color: #ecb722;
+}
+
+main {
+  background: #84ffff;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+
+.flexbox-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flexbox-container2{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 5rem;
+  text-align: center;
+}
+.flexbox-container3{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 5rem;
+  text-align: center;
+}
+.box{
+height: 400px;
+ width: 268px;
+ border: 1px solid #bcbcbc;
+ background: white;
+ padding: 1rem;
+}
+.box2{
+height: 500px;
+ width: 268px;
+ border: 1px solid #03a3df;
+ background: white;
+ padding: 1rem;
+}
+#content1 {
+  background: #ecb722;
+  color: #1b447f;
+  grid-area: content1;
+  padding-bottom: 1rem;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+
+}
+
+#content2 {
+  background: #1b447f;
+  color: white;
+  grid-area: content2;
+  height: 423px;
+  box-sizing:border-box;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+#footer {
+    background-image: url(https://github.com/UWFront-End-Cert/html100/blob/master/lesson07-styleguide/styleguide%20design%20elements/footerImage.jpg?raw=true);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+  color: white;
+  font-size: 20px;
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
